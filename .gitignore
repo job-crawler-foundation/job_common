@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/src/JobBot.Common/.vs/JobBot.Common
+/src/JobBot.Common/JobBot.Common.Models/obj
