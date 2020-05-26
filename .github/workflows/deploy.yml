@@ -17,7 +17,10 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
+    - name: add source
+      run: - name: Add GPR Source
+      run: dotnet nuget sources add -name "JobBot.Common.Models" -Source https://nuget.pkg.github.com/DmytroSH/index.json -Username DmytroSH -Password ${{ secrets.GITHUB_TOKEN }}
     - name: pack
       run: dotnet pack src/JobBot.Common/JobBot.Common.Models/JobBot.Common.Models.csproj --configuration Release
     - name: publish
-      run: dotnet nuget push "src/JobBot.Common/JobBot.Common.Models/bin/Release/JobBot.Common.Models.1.0.0.nupkg" --source "github"
+      run: dotnet nuget push "src/JobBot.Common/JobBot.Common.Models/bin/Release/JobBot.Common.Models.1.0.0.nupkg" --source "JobBot.Common.Models"
