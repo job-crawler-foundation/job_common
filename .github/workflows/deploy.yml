@@ -16,7 +16,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.101
+        dotnet-version: 3.1.200
     - name: add source
       run: dotnet nuget add source -name "JobBot.Common.Models" -Source https://nuget.pkg.github.com/DmytroSH/index.json -Username DmytroSH -Password ${{ secrets.GITHUB_TOKEN }}
     - name: pack
