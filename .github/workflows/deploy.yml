@@ -16,7 +16,7 @@ jobs:
     - name: Setup NuGet.exe for use with actions
       uses: NuGet/setup-nuget@v1.0.2
     - name: add source
-      run: nuget sources add -name "JobBot.Common.Models" -Source https://github.com/job-crawler-foundation/index.json  -Username  DmytroSH -Password ${{ secrets.GITHUB_TOKEN }}
+      run: nuget sources add -name "JobBot.Common.Models" -Source https://nuget.pkg.github.com/DmytroSH/index.json  -Username  DmytroSH -Password ${{ secrets.GITHUB_TOKEN }}
     - name: pack
       run: dotnet pack src/JobBot.Common/JobBot.Common.Models/JobBot.Common.Models.csproj --configuration Release
     - name: publish
