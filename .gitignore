@@ -5,3 +5,5 @@
 /.vs
 /src/JobBot.Common/.vs/JobBot.Common
 /src/JobBot.Common/JobBot.Common.Models/obj
+/src/JobBot.Common/JobBot.Common.Models/bin/Release/netcoreapp3.1
+/src/JobBot.Common/JobBot.Common.Models/bin/Release
